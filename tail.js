@@ -10,5 +10,7 @@ const assertEqual = function(actual, expected) {
   }
 };
 
+
+
 const result = tail(["Hello", "Lighthouse", "Labs"]);
 assertEqual(result, ["Lighthouse", "Labs"]); // => will always fail!
