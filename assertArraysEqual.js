@@ -18,4 +18,4 @@ const assertArraysEqual = function(a, b) {
   }
 };
 
-assertArraysEqual([1, 2, 3], [1, 2, 5]); // => should PASS
+assertArraysEqual([1, 2, 3], [1, 2, 3]); // => should PASS
