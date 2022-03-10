@@ -21,6 +21,7 @@ const countOnly = function (allItems, itemsToCount) {
     console.log(item);
   }
   return results;
+
 }
 
 const firstNames = [
@@ -35,7 +36,11 @@ const firstNames = [
   "Joe"
 ];
 
+
 const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
+
+console.log(result1);
+
 
 assertEqual(result1["Jason"], 1);
 assertEqual(result1["Karima"], undefined);
