@@ -1,3 +1,8 @@
+//map function will take in
+//1. an array to map
+//2. a callback function
+
+
 const eqArrays = function(a, b) {
   if (a.length !== b.length){
     return false
@@ -18,18 +23,21 @@ const assertArraysEqual = function(a, b) {
   }
 };
 
-const letterPositions = function(sentence) {
-  const results = {};
-  for (let i = 0; i < sentence.length; i++) {
-    if (!results[sentence[i]]) {
-      results[sentence[i]] = [i];
-    } else {
-      results[sentence[i]].push(i);
-    }
+
+const words = ["ground", "control", "to", "major", "tom"];
+
+
+const map = function (array, callback) {
+  const results = [];
+
+  for (let item of array) {
+    results.push(callback(item));
   }
   return results;
-};
+}
 
-console.log(letterPositions("lighthouse in the house"))
+const results1 = map(words, word => word[0]);
+console.log(results1)
 
-assertArraysEqual(letterPositions("lighthouse in the house").i, [1, 11]);
+assertArraysEqual(map(words, word => word[0]), [ 'g', 'c', 't', 'm', 't' ]
+)
