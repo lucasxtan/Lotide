@@ -1,3 +1,5 @@
+const assertEqual = require('./assertEqual');
+
 const tail = function(arr) {
   return arr.slice(1);
 };
@@ -12,7 +14,7 @@ const tail = function(arr) {
 
 
 
-const result = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(result, ["Lighthouse", "Labs"]); // => will always fail!
+// const result = tail(["Hello", "Lighthouse", "Labs"]);
+// assertEqual(result, ["Lighthouse", "Labs"]); // => will always fail!
 
 module.exports = tail;
