@@ -18,7 +18,10 @@ const findKey = function (obj, callback) {
   }
 }
 
-
+/*here the key of the object inside the object is already hard coded into the 
+callback function, however if you did want to access a key of a nested object then
+you could do object[key][keykey], or even object[key][keykey][keykeykey]
+*/
 
 console.log(findKey({
   "Blue Hill": { stars: 1 },
